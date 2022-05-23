@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: sfcn-helm-repo
+spec:
+  interval: 1m
+  secretRef:
+    name: sfcn-helm-repo-creds
+  timeout: 1m0s
+  url: https://devhub.cisco.com/artifactory/asac-dev-helm
